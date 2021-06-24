@@ -1,0 +1,24 @@
+{
+    _id: <ObjectId3>,
+    user_id: "101",
+    following: [
+        {
+            user_id: "102",
+            date_follow: "2021-06-13T13:01:12"
+        },
+        {
+            user_id: "101",
+            date_follow: "2021-06-13T13:12:00"
+        }
+    ],
+    followers: [
+        {
+            user_id: "103",
+            date_follow: "2021-06-13T13:01:00"
+        },
+        {
+            user_id: "102",
+            date_follow: "2021-06-13T13:20:00"
+        }
+    ]
+}

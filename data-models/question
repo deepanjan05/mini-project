@@ -1,0 +1,27 @@
+{
+    _id: <ObjectId1>,
+    user_id: "101",
+    title: "Main question",
+    body: "question explaination...",
+    votes: {
+        up-votes: 1,
+        down-vote: 1,
+        voters: [
+            {
+                user_id: "101",
+                vote: 1,
+                vote_time: "2021-06-13T13:00:00"  
+            }, 
+            {
+                user_id: "102",
+                vote: -1,
+                vote_time: "2021-06-14T15:00:00"  
+            }
+        ],
+    },
+    answers: 12,
+    best_answer: <ObjectId2> (optional),
+    creation_date: "2021-06-12T02:00:00",
+    close_date: "2021-06-23T15:00:00",
+    points_recieved: 5
+}
