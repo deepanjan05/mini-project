@@ -7,6 +7,7 @@
 		<groupId>com.sapient</groupId>
 		<artifactId>miniproject</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.miniproject</groupId>
 	<artifactId>registrationsystem</artifactId>
@@ -24,7 +25,7 @@
 	</properties>
 
 	<dependencies>
-	
+
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -53,6 +54,30 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

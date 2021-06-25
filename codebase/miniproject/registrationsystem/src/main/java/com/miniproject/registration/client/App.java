@@ -8,9 +8,9 @@ import com.miniproject.registration.entity.User;
 
 public class App {
 	public static void main(String[] args) {
-		User user = new User(101, "Deepanjan", "deepanjan@gmail", "deep", "male");
-		
-		UserDAO udao = new UserDAO();
-		udao.insertUser(user);
+//		User user = new User(103, "Deepanjan Datta", "deepanjan05@gmail", "deep", "male");
+//		
+//		UserDAO udao = new UserDAO();
+//		udao.insertUser(user);
 	}
 }

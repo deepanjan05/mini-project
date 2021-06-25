@@ -1,30 +1,27 @@
 package com.miniproject.registration.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.*;
 
 @Data
-@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
-	@Id
+	@Id 
 	@Column(name = "userid")
-	private int userId; 
-	
-	@Column(name="name")
-	private String name; 
-	
-	@Column( name = "email")
+	private int userId;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "email")
 	private String email;
-	
-	@Column( name = "password")
+
+	@Column(name = "password")
 	private String password;
-	
-	@Column( name = "gender")
+
+	@Column(name = "gender")
 	private String gender;
 }
