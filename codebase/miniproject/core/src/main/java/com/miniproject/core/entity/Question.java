@@ -2,6 +2,8 @@ package com.miniproject.core.entity;
 
 import java.util.List;
 
+import org.bson.types.ObjectId;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,10 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Question {
-	private Integer qid;
 	private Integer uid;
+	private String qTitle;
 	private String qBody;
-	private Integer bestAnswerId;
-	private List<Integer> answers;
+	private ObjectId bestAnswerId;
+	private List<ObjectId> answers;
 	
 }
