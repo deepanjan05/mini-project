@@ -1,4 +1,4 @@
-# QAStack
+# StackQFlow
 
 ## User stories:
 > Application should have option to login to system
