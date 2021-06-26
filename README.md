@@ -17,11 +17,13 @@
 
 ## Todo:
 
-- Cucumber scinarios
-- [ ] ER Diagram
-- [ ] Mongo Datamodels
-- [ ] UML Class diagram
-
-- [ ] An uncompleted task
-- [x] A completed task
-### A
+- [x] Cucumber scinarios
+- [x] ER Diagram
+- [x] Mongo Datamodels
+- [x] UML Class diagram
+- [x] Test Cases
+- [ ] Business Logic (middleware + servlets)
+- [ ] Front-End (jsp files)
+- [ ] Dockerfile
+- [ ] Jenkins integration
+- [ ] Live Testing

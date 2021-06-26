@@ -7,39 +7,135 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>StackQFlow : Registration</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StackQFlow | Register</title>
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+	href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
+
 <body>
-<sap:if test="${requestScope.errorMsg!=null}">
-	<h3> Error: ${requestScope.errorMsg} </h3>
-</sap:if>
-	<h2>Register Here</h2>
-	<form action="register" method="post">
-		<div class="container">
-			<div class="form-group">
-				<label for="name">Name </label> <input type="text"
-					class="form-control" id="name" name="name"
-					placeholder="Enter Name">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a href="#" class="navbar-brand">Stack<b>QFlow</b></a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse"
+			data-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Collection of nav links, forms, and other content for toggling -->
+		<div id="navbarCollapse"
+			class="collapse navbar-collapse justify-content-start">
+			<div class="navbar-nav">
+				<a href="home" class="nav-item nav-link">Home</a> <a href="ask"
+					class="nav-item nav-link">Ask Question</a> <a href="about.jsp"
+					class="nav-item nav-link">About</a>
 			</div>
-			<div class="form-group">
-				<label for="email">Email </label> <input type="text"
-					class="form-control" id="email" name="email"
-					placeholder="Enter Name">
+			<div class="navbar-nav ml-auto">
+				<a href="login.jsp" data-toggle="dropdown" class="nav-link mr-4"
+					aria-expanded="false">Login</a> <a href="register.jsp"
+					data-toggle="dropdown" class="btn btn-primary sign-up-btn"
+					aria-expanded="false">Sign up</a>
 			</div>
-			<div class="form-group">
-				<label for="password">Password</label> <input type="password"
-					class="form-control" id="password" name="password"
-					placeholder="Enter Password">
-			</div>
-			<div class="form-group">
-				<label for="gender"> Gender </label> <input type="text"
-					class="form-control" id="gender" name="gender"
-					placeholder="Enter Gender">
-			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
 		</div>
-	</form>
+	</nav>
+
+	<div class="container">
+		<br>
+
+		<!-- <sap:if test="${requestScope.errorMsg!=null}">
+			<h3>Error: ${requestScope.errorMsg}</h3>
+		</sap:if> -->
+
+		<div class="card bg-light">
+			<article class="card-body mx-auto" style="max-width: 400px;">
+				<h4 class="card-title mt-3 text-center">Create Account</h4>
+				<p class="text-center">Get started with your free account</p>
+				<form action="register" method="post">
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-user"></i>
+							</span>
+						</div>
+						<input name="name" class="form-control" placeholder="Full name"
+							type="text" required>
+					</div>
+					<!-- form-group// -->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-envelope"></i>
+							</span>
+						</div>
+						<input name="email" class="form-control"
+							placeholder="Email address" type="email" required>
+					</div>
+					<!-- form-group// -->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i
+								class="fa fa-venus-mars"></i>
+							</span>
+						</div>
+						<select class="form-control" name="gender">
+							<option selected="">Select Gender</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+							<option value="non-binary">Non-binary</option>
+						</select>
+					</div>
+					<!-- form-group end.// -->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-lock"></i>
+							</span>
+						</div>
+						<input class="form-control" id="password"
+							placeholder="Create password" type="password" name="password"
+							onchange='check();' required>
+					</div>
+					<!-- form-group// -->
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-lock"></i>
+							</span>
+						</div>
+						<input class="form-control" id="confirm_password"
+							placeholder="Repeat password" type="password" onchange="check();"
+							required>
+						<div class="input-group-append" id="password_match_message"></div>
+					</div>
+					<sap:if test="${requestScope.errorMsg!=null}">
+						<div class="alert alert-danger" role="alert">
+							${requestScope.errorMsg}</div>
+					</sap:if>
+					<!-- form-group// -->
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block">
+							Create Account</button>
+					</div>
+					<!-- form-group// -->
+					<p class="text-center">
+						Have an account? <a href="">Log In</a>
+					</p>
+				</form>
+			</article>
+		</div>
+		<!-- card.// -->
+
+	</div>
+	<!--container end.//-->
 </body>
+<script type="text/javascript">
+	var check = function() {
+		if (document.getElementById('password').value == document
+				.getElementById('confirm_password').value
+				&& document.getElementById('password').value != "") {
+			document.getElementById('password_match_message').innerHTML = '<span class="input-group-text"> <i class="fa fa-check" style="color:green"></i></span>';
+		} else {
+			document.getElementById('password_match_message').innerHTML = '<span class="input-group-text"> <i class="fa fa-times" style="color:red"></i></span>';
+		}
+	}
+</script>
 </html>
