@@ -1,11 +1,7 @@
 \c miniproject;
 
-CREATE SEQUENCE user_id_seq;
-
-ALTER SEQUENCE user_id_seq RESTART WITH 101;
-
 create table users(
-    userid int DEFAULT nextval('user_id_seq'),
+    userid SERIAL,
     name varchar(50) not null,
     email varchar(40) UNIQUE,
     password varchar(30) not null,
