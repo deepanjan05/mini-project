@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -59,8 +60,17 @@ public class LoginController extends HttpServlet{
 			if (userId != -1) {
 				log.info("Login Success!");
 				User user = UserService.getUser(userId); 
+				
+				// set session attributes
 				session.setAttribute("userId", user.getUserId());
 				session.setAttribute("userName", user.getName());
+				
+				// set session attributes
+				Cookie userNameCookie = new Cookie("userName", (String) session.getAttribute("userName"));
+				Cookie userIDCookie = new Cookie("userId", user.getName());
+				
+				resp.addCookie(userNameCookie);
+				resp.addCookie(userIDCookie);
 				
 				String URI = "login";
 				URI = "WEB-INF/view/home.jsp";
