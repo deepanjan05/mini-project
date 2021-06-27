@@ -58,7 +58,7 @@ pipeline {
             when { expression { return params.ENTRY == "Maven package" } }
             steps {
                 script {
-                    if (!fileExists("pom.xml")) {
+                    if (!fileExists("${path_}/pom.xml")) {
                         sh "git clone https://github.com/deepanjan05/mini-project.git"
                     } else {
                         echo "Local git repo already present..."
