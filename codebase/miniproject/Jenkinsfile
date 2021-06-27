@@ -38,7 +38,9 @@ pipeline {
             when { expression { return params.ENTRY == "Maven package" }
             steps {
                 echo "------------- Starting Database -------------"
+                sh "docker start postgres-team-2"
                 sh "docker exec -t postgres-team-2 psql -U postgres"
+                sh "docker start mongo-team-2"
                 sh "docker exec -t mongo-team-2 mongo" 
                 echo ">>>>>> Mongo running..."
                 echo "------------- Install maven dependencies and create package -------------"
@@ -69,7 +71,7 @@ pipeline {
                 dir("${path_}") {
                     // Build Maven docker image and container.
                     sh "docker pull tomcat:9.0"
-                    sh "docker create --name miniproject-team-2 -p 8081:8080 -d tomcat:9.0"
+                    sh "docker create --name miniproject-team-2 -p 8081:8080 tomcat:9.0"
                     sh "docker cp webapp/target/webapp-0.0.1-SNAPSHOT.war miniproject-team-2:/usr/local/tomcat/webapps/"
                 }
             }
@@ -80,7 +82,8 @@ pipeline {
                 echo "------------- Run Docker container -------------"
                 dir("${path_}") {
                     // Run maven docker container
-                    sh "docker run -it -p 8081:8080 miniproject-team-2"
+                    sh "docker start miniproject-team-2"
+                    sh "docker exec -it miniproject-team-2 catalina.sh start"
                 }
             }
 
