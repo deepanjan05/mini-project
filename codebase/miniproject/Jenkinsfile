@@ -20,7 +20,7 @@ pipeline {
     stages {
 
         stage('Setup') {
-            when { expression { return params.DATABASE_SETUP }
+            when { expression { return params.DATABASE_SETUP } }
             steps {
                 echo "------------- Setup database -------------"
                 sh "docker pull postgres"
@@ -35,7 +35,7 @@ pipeline {
         }
 
         stage('Install') {
-            when { expression { return params.ENTRY == "Maven package" }
+            when { expression { return params.ENTRY == "Maven package" } }
             steps {
                 echo "------------- Starting Database -------------"
                 sh "docker start postgres-team-2"
@@ -60,12 +60,13 @@ pipeline {
                         } else {
                             sh "mvn clean package -PnoTest"
                         }
+                    }
                 }
             }
         }
 
         stage('Build') {
-            when { expression { return params.ENTRY != "Deploy only" }
+            when { expression { return params.ENTRY != "Deploy only" } }
             steps {
                 echo "------------- Build Docker image -------------"
                 dir("${path_}") {
@@ -92,8 +93,7 @@ pipeline {
 
     post {
         failure {
-		    echo "Application failed *****" 
+		    echo "Application failed *****"
         }
-    }    
-
+    }
 }
