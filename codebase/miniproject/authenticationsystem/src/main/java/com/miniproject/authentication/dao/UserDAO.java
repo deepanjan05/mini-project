@@ -97,13 +97,16 @@ public class UserDAO implements IUserDAO {
 		// TODO Auto-generated method stub
 		User user = null;
 		try {
-			CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-			CriteriaQuery<User> criteria = builder.createQuery(User.class);
-			criteria.select(criteria.from(User.class)); 
-			criteria.where(builder.equal(criteria.from(User.class).get("email"), email));
+			Query query = entityManager
+					.createQuery("Select u from User u where u.email = :email");
+			query.setParameter("email", email);
+
+			user = (User) query.getSingleResult();
 			
-			user = entityManager.createQuery(criteria).getSingleResult();
+			//user = entityManager.createQuery(criteria).getResultList().get(0);
 		} catch (NoResultException e) {
+			log.info("User does not exist. User email: " + email);
+		} catch (NonUniqueResultException e) {
 			log.info("User does not exist. User email: " + email);
 		} catch (IllegalStateException e) {
 			log.error("Entity manager is closed!");
