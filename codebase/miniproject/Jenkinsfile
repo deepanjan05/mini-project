@@ -24,12 +24,10 @@ pipeline {
             steps {
                 echo "------------- Setup database -------------"
                 sh "docker pull postgres"
-                sh "docker run --name postgres-team-2 -p 5432:5432 -v ${env.WORKSPACE}\\postgres-team-2-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres"
-                sh "docker exec -it postgres-team-2 psql -U postgres"
+                sh "docker run --name postgres-team-2 -p 5432:5432 -v ${env.WORKSPACE}\\postgres-team-2-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=miniproject -d postgres"
                 echo ">>>>>> Postgres running..."
                 sh "docker pull mongo"
                 sh "docker run --name mongo-team-2 -p 27017:27017 -d mongo"
-                sh "docker exec -it mongo-team-2 mongo" 
                 echo ">>>>>> Mongo running..."
             }
         }
@@ -37,14 +35,6 @@ pipeline {
         stage('Install') {
             when { expression { return params.ENTRY == "Maven package" } }
             steps {
-                echo "------------- Starting Database -------------"
-                sh "docker start postgres-team-2"
-                sh "docker exec -t postgres-team-2 psql -U postgres"
-                sh "docker start mongo-team-2"
-                sh "docker exec -t mongo-team-2 mongo" 
-                echo ">>>>>> Mongo running..."
-                echo "------------- Install maven dependencies and create package -------------"
-                 
                 script {
                     if (!fileExists("pom.xml")) {
                         sh "git clone https://github.com/deepanjan05/mini-project.git"
@@ -52,6 +42,16 @@ pipeline {
                         echo "Local git repo already present..."
                     }
                 }
+                
+                echo "------------- Starting Database -------------"
+                sh "docker start postgres-team-2"
+                sh "docker exec -it postgres-team-2 psql -U postgres -f registrationsystem/postrges.sql"
+                sh "docker start mongo-team-2"
+                sh "docker exec -t mongo-team-2 mongo" 
+                echo ">>>>>> Mongo running..."
+
+                echo "------------- Install maven dependencies and create package -------------"
+                
                 dir("${path_}") {
                     sh "git pull origin main"
                     script {
