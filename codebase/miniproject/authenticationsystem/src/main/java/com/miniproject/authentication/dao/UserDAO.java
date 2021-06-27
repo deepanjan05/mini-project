@@ -47,14 +47,14 @@ public class UserDAO implements IUserDAO {
 	public User getUser(int userId) {
 		// TODO Auto-generated method stub
 		User user = null;
-		try {
-			CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-			CriteriaQuery<User> criteria = builder.createQuery(User.class);
-			criteria.select(criteria.from(User.class)); 
-			criteria.where(builder.equal(criteria.from(User.class).get("userId"), userId));
-			
-			user = entityManager.createQuery(criteria).getSingleResult();
+		try {		
+			Query query = entityManager.createQuery("Select u from User u where u.userId = :userId");
+			query.setParameter("userId", userId);
+
+			user = (User) query.getSingleResult();
 		} catch (NoResultException e) {
+			log.info("User does not exist for user-id: " + userId);
+		} catch (NonUniqueResultException e) {
 			log.info("User does not exist for user-id: " + userId);
 		} catch (IllegalStateException e) {
 			log.error("Entity manager is closed!");
@@ -74,7 +74,7 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public boolean deleteUser(int userId) {
 		try {
-			entityManager.getTransaction().begin(); 
+			entityManager.getTransaction().begin();
 			entityManager.remove(entityManager.getReference(User.class, userId));
 			entityManager.getTransaction().commit();
 		} catch (IllegalArgumentException e) {
@@ -97,13 +97,12 @@ public class UserDAO implements IUserDAO {
 		// TODO Auto-generated method stub
 		User user = null;
 		try {
-			Query query = entityManager
-					.createQuery("Select u from User u where u.email = :email");
+			Query query = entityManager.createQuery("Select u from User u where u.email = :email");
 			query.setParameter("email", email);
 
 			user = (User) query.getSingleResult();
-			
-			//user = entityManager.createQuery(criteria).getResultList().get(0);
+
+			// user = entityManager.createQuery(criteria).getResultList().get(0);
 		} catch (NoResultException e) {
 			log.info("User does not exist. User email: " + email);
 		} catch (NonUniqueResultException e) {
@@ -113,7 +112,7 @@ public class UserDAO implements IUserDAO {
 		} catch (IllegalArgumentException e) {
 			log.error("Tried executing an invalid query!");
 		}
-		
+
 		return user;
 	}
 

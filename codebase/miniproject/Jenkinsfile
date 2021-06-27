@@ -25,10 +25,30 @@ pipeline {
                 echo "------------- Setup database -------------"
                 sh "docker pull postgres"
                 bat "docker run --name postgres-team-2 -p 5432:5432 -v ${env.WORKSPACE}\\postgres-team-2-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=miniproject -d postgres"
-                echo ">>>>>> Postgres running..."
                 sh "docker pull mongo"
                 sh "docker run --name mongo-team-2 -p 27017:27017 -d mongo"
+                echo "------------- Starting Database -------------"
+                sh "docker start postgres-team-2"
+                sh "docker exec -d postgres-team-2 psql -U postgres -f registrationsystem/postrges.sql"
+                echo ">>>>>> Postgres running..."
+                sh "docker start mongo-team-2"
+                sh "docker exec -d mongo-team-2 mongo" 
                 echo ">>>>>> Mongo running..."
+
+            }
+        }
+
+        stage('Databse Start') {
+            when { expression { return !params.DATABASE_SETUP } }
+            steps {
+                echo "------------- Starting Database -------------"
+                sh "docker start postgres-team-2"
+                sh "docker exec -d postgres-team-2 psql -U postgres"
+                echo ">>>>>> Postgres running..."
+                sh "docker start mongo-team-2"
+                sh "docker exec -d mongo-team-2 mongo" 
+                echo ">>>>>> Mongo running..."
+
             }
         }
 
@@ -42,13 +62,6 @@ pipeline {
                         echo "Local git repo already present..."
                     }
                 }
-                
-                echo "------------- Starting Database -------------"
-                sh "docker start postgres-team-2"
-                sh "docker exec -it postgres-team-2 psql -U postgres -f registrationsystem/postrges.sql"
-                sh "docker start mongo-team-2"
-                sh "docker exec -t mongo-team-2 mongo" 
-                echo ">>>>>> Mongo running..."
 
                 echo "------------- Install maven dependencies and create package -------------"
                 
@@ -84,7 +97,7 @@ pipeline {
                 dir("${path_}") {
                     // Run maven docker container
                     sh "docker start miniproject-team-2"
-                    sh "docker exec -it miniproject-team-2 catalina.sh start"
+                    sh "docker exec -d miniproject-team-2 catalina.sh start"
                 }
             }
 

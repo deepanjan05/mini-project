@@ -1,8 +1,0 @@
-com/miniproject/authentication/contracts/ILogDAO.class
-com/miniproject/authentication/contracts/IUserDAO.class
-com/miniproject/authentication/util/UserUtil.class
-com/miniproject/authentication/dao/UserDAO.class
-com/miniproject/authentication/entity/LogData.class
-com/miniproject/authentication/entity/User.class
-com/miniproject/authentication/util/JPAUtil.class
-com/miniproject/authentication/service/UserService.class
