@@ -20,7 +20,7 @@
 
 <body>
 
-	<%@ include file="./header.jsp"%>
+<%-- 	<%@ include file="./WEB-INF/view/header.jsp"%> --%>
 
 	<div class="container">
 		<br>
