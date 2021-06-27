@@ -11,6 +11,7 @@
 </head>
 <body>
 <h1> Welcome to StackQFlow </h1>
-<h2> ${sessionScope.name}</h2>
+<h2> ${sessionScope.userName}</h2>
+<h2> ${sessionScope.userId}</h2>
 </body>
 </html>

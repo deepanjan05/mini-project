@@ -49,7 +49,10 @@ public class LoginUnitTest {
 	
 	@Test
 	public void successfulLogin() {
-		assertNotEquals(INVALID_UID, UserService.loginUser(EMAIL, PASSWORD));
+		Integer userId = UserService.loginUser(EMAIL, PASSWORD);
+		assertNotEquals(INVALID_UID, userId);
+		assertEquals(EMAIL, UserService.getUser(userId).getEmail());
+		
 	}
 
 	@Test

@@ -68,4 +68,14 @@ public class UserService {
 		
 		
 	}
+	
+	public static User getUser(Integer userId) {
+		if (userId == null || userId == -1)
+			return null;
+
+		IUserDAO uDAO = new UserDAO();
+		return uDAO.getUser(userId);
+		
+		
+	}
 }
