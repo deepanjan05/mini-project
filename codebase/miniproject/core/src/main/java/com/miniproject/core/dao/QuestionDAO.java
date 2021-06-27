@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bson.conversions.Bson;
+import org.bson.types.ObjectId;
 
 import com.miniproject.core.contracts.IQuestionDAO;
 import com.miniproject.core.entity.Question;
@@ -25,8 +26,9 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	@Override
-	public void insertOne(Question question) {
+	public boolean insertOne(Question question) {
 		collection.insertOne(question);
+		return true;
 		
 	}
 
@@ -39,12 +41,12 @@ public class QuestionDAO implements IQuestionDAO {
 	@Override
 	public long update(Bson filters, Bson updates) {
 		
-		return collection.updateMany(filters, updates).getModifiedCount();;
+		return collection.updateMany(filters, updates).getModifiedCount();
 	}
 	
 	@Override
-	public Question findById(int id) {
-		return (Question) collection.find(eq("qId", id)).first(); 
+	public Question findById(ObjectId id) {
+		return (Question) collection.find(eq("uid", id)).first(); 
 	}
 
 	@Override
@@ -58,7 +60,7 @@ public class QuestionDAO implements IQuestionDAO {
 	}
 
 	@Override
-	public boolean deleteById(int id) {
+	public boolean deleteById(ObjectId id) {
 		return collection.deleteOne(eq("qid", id)).getDeletedCount()>0; 
 	}
 
