@@ -23,6 +23,8 @@ pipeline {
             when { expression { return params.DATABASE_SETUP } }
             steps {
                 echo "------------- Setup database -------------"
+                sh "docker rm -f postgres-team-2"
+                sh "docker rm -f mongo-team-2"
                 sh "docker pull postgres"
                 bat "docker run --name postgres-team-2 -p 5432:5432 -v ${env.WORKSPACE}\\postgres-team-2-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=miniproject -d postgres"
                 sh "docker pull mongo"
@@ -85,6 +87,7 @@ pipeline {
                 dir("${path_}") {
                     // Build Maven docker image and container.
                     sh "docker pull tomcat:9.0"
+                    sh "docker rm -f miniproject-team-2"
                     sh "docker create --name miniproject-team-2 -p 8081:8080 tomcat:9.0"
                     sh "docker cp webapp/target/webapp-0.0.1-SNAPSHOT.war miniproject-team-2:/usr/local/tomcat/webapps/"
                 }
