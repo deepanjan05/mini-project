@@ -1,12 +1,22 @@
 package com.miniproject.webapp.controllers;
 
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+import com.miniproject.authentication.entity.User;
+import com.miniproject.authentication.service.UserService;
+import com.miniproject.webapp.services.AuthenticationService;
+
 import lombok.extern.slf4j.Slf4j;
+
+/*
+ * @Author: Praduman Pannu
+ * @Email: praduman.pannu@publicissapient.com
+ */
 
 @Slf4j
 @WebServlet("/profile")
@@ -21,11 +31,23 @@ public class ProfileController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		log.info("---------------- Profile page request -----------------");
-		//HttpSession session = req.getSession();
 		
-		// To be completed by Praduman
+		if(AuthenticationService.isLoggedIn(req)) {
+			HttpSession session = req.getSession();
+			Integer userId = Integer.parseInt((String) session.getAttribute("userId"));
+			
+			
+			User user = UserService.getUser(userId);
+			req.setAttribute("userName", user.getName());
+			req.setAttribute("email", user.getEmail());
+			req.setAttribute("gender", user.getGender());
+			
+			String URI = "WEB-INF/view/profile.jsp";
+			req.getRequestDispatcher(URI).forward(req, resp);
+		}
 		
-		String URI = "WEB-INF/view/profile.jsp";
+		String URI = "WEB-INF/view/home.jsp";
 		req.getRequestDispatcher(URI).forward(req, resp);
+		
 	}
 }

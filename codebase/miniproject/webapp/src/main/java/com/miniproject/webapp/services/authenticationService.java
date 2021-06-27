@@ -9,7 +9,7 @@ import com.miniproject.authentication.entity.User;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class authenticationService {
+public class AuthenticationService {
 	public static boolean isLoggedIn(HttpServletRequest req) {
 		HttpSession session = req.getSession();
 
