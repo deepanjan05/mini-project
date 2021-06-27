@@ -65,6 +65,7 @@ public class RegistrationController extends HttpServlet {
 		// redirect to respective page
 		if (registered) {
 			session.setAttribute("name", user.getName());
+			session.setAttribute("user-id", user.getUserId);
 			log.info(">>>>>>> Registration successful. Logging in...");
 			
 			

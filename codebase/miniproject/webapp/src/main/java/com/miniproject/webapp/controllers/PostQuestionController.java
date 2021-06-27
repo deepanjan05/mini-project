@@ -1,4 +1,4 @@
-package com.miniproject.core.controllers;
+package com.miniproject.webapp.controllers;
 
 import java.io.IOException;
 
@@ -28,9 +28,17 @@ public class PostQuestionController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		
+		String URI = "login";
+		URI = "WEB-INF/view/home.jsp";
+		
+		//Check login
+		if(session.getAttribute("user-id").equals(null)) {
+			req.getRequestDispatcher(URI).forward(req, resp);
+		}
+		
 		Question question = new Question();
 		
-		question.setUid(Integer.parseInt(req.getParameter("user-id")));
+		question.setUid((int) (session.getAttribute("user-id")));
 		question.setQTitle(req.getParameter("question-title"));
 		question.setQBody(req.getParameter("question-body"));
 		question.setBestAnswerId(null);
