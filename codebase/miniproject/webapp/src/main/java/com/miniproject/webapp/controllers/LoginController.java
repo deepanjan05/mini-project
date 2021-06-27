@@ -56,7 +56,7 @@ public class LoginController extends HttpServlet{
 		// validate credentials
 		log.info(">>>>>>> Validating credentials");
 		try {
-			Integer userId = UserService.loginUser(email, password); 
+			Integer userId = UserService.loginUser(email.toString(), password); 
 			if (userId != -1) {
 				log.info("Login Success!");
 				User user = UserService.getUser(userId); 

@@ -37,7 +37,7 @@ public class PostQuestionController extends HttpServlet {
 		URI = "register.jsp";
 		
 		//Check login
-		if(session.getAttribute("user-id") == null) {
+		if(session.getAttribute("userId") == null) {
 			log.info("you are NOT logged in!");
 			req.getRequestDispatcher(URI).forward(req, resp);
 			
@@ -45,13 +45,14 @@ public class PostQuestionController extends HttpServlet {
 		
 		Question question = new Question();
 		
-		question.setUid(Integer.parseInt((String) session.getAttribute("user-id")));
+		question.setUid(Integer.parseInt((String) session.getAttribute("userId")));
 		question.setQTitle(req.getParameter("question-title"));
 		question.setQBody(req.getParameter("question-body"));
 		
 		QuestionService questionService = new QuestionService();
 		if(questionService.postQuestion(question)) {
 			log.info("{}",question.toString());
+			req.getRequestDispatcher("all-questions").forward(req, resp);
 		}
 		else {
 			log.info("error: unsuccessful");

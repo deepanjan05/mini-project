@@ -39,26 +39,30 @@ public class ListAllQuestionsController extends HttpServlet {
 		URI = "WEB-INF/view/home.jsp";
 		
 		//Check login
-		if(session.getAttribute("user-id") == null) {
+		if(session.getAttribute("userId") == null) {
 			log.info("you are NOT logged in");
 			req.getRequestDispatcher(URI).forward(req, resp);
 		}
 		
 		QuestionDAO dao = new QuestionDAO();
 		
-		log.info(">>>>>>>>>>>getting your questions----- " + session.getAttribute("user-id"));
+		log.info(">>>>>>>>>>>getting your questions----- " + session.getAttribute("userId"));
 	
-		List<Question> list = new ArrayList<>();
+		List<String> list = new ArrayList<>();
 		
 		/*
 		 * if(Integer.valueOf(session.getAttribute("user-id").toString()) ==
 		 * (Integer)3)log.info("both are integers"); else
 		 * log.info("incompatible types!!!!!!!!!");
 		 */
-		Integer userId = Integer.valueOf(session.getAttribute("user-id").toString());
+		Integer userId = Integer.valueOf(session.getAttribute("userId").toString());
 		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
+		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
+		list.forEach((item) -> log.info(item));
 		
-		session.setAttribute("my-questions", list);
+		session.setAttribute("myQuestions", list);
+		
+		req.getRequestDispatcher("myQuestions.jsp").forward(req, resp);
 		
 		
 	}
