@@ -31,7 +31,7 @@ pipeline {
                 sh "docker run --name mongo-team-2 -p 27017:27017 -d mongo"
                 echo "------------- Starting Database -------------"
                 sh "docker start postgres-team-2"
-                sh "docker exec -d postgres-team-2 psql -U postgres -f registrationsystem/postrges.sql"
+                sh "docker exec -d postgres-team-2 psql -U postgres miniproject < registrationsystem/postrges.sql"
                 echo ">>>>>> Postgres running..."
                 sh "docker start mongo-team-2"
                 sh "docker exec -d mongo-team-2 mongo" 
