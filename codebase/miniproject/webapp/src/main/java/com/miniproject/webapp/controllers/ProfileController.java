@@ -46,7 +46,7 @@ public class ProfileController extends HttpServlet{
 			req.getRequestDispatcher(URI).forward(req, resp);
 		}
 		
-		String URI = "WEB-INF/view/home.jsp";
+		String URI = "login.jsp";
 		req.getRequestDispatcher(URI).forward(req, resp);
 		
 	}
