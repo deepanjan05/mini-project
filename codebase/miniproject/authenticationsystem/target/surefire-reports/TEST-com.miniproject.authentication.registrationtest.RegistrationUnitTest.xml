@@ -1,65 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.miniproject.authentication.registrationtest.RegistrationUnitTest" time="3.88" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.miniproject.authentication.registrationtest.RegistrationUnitTest" time="3.402" errors="0" skipped="0">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="15.0.1+9-18"/>
-    <property name="sun.boot.library.path" value="E:\DevTools\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507\jre\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\eclipse-workspace\miniproject\authenticationsystem"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/praduman/PS/mini-project/codebase/miniproject/authenticationsystem"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=";"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="IN"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\eclipse-workspace\miniproject\authenticationsystem"/>
+    <property name="user.dir" value="/Users/praduman/PS/mini-project/codebase/miniproject/authenticationsystem"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="15.0.1+9-18"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\deepa\AppData\Local\Temp\"/>
+    <property name="java.runtime.version" value="15.0.2+7-27"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/s6/f3yc8yjd247f68lst8s54cjr0000gn/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf14839102270117253966.tmp"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="E:\DevTools\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:/DevTools/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin/server;E:/DevTools/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.1\;E:\Git\cmd;E:\DevTools\apache-maven-3.6.3\bin;E:\Java\JDK-11\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;;C:\Program Files\PowerShell\7\;C:\ProgramData\chocolatey\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\deepa\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Program Files\Graphviz 2.44.1\bin;C:\Users\deepa\AppData\Local\GitHubDesktop\bin;E:\DevTools\eclipse;;."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/praduman/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf14426200814803837447.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/praduman/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="59.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\deepa"/>
-    <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="file.encoding" value="Cp1252"/>
+    <property name="os.version" value="10.16"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/praduman"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="15"/>
-    <property name="user.name" value="deepa"/>
-    <property name="java.class.path" value="E:\DevTools\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="user.name" value="praduman"/>
+    <property name="java.class.path" value="/Users/praduman/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.18.0.20210603-1206/jars/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="15"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
-    <property name="java.home" value="E:\DevTools\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="15.0.1"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="15.0.2"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="E:\eclipse-workspace\miniproject\authenticationsystem\EMBEDDED"/>
-    <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2020-10-20"/>
+    <property name="maven.home" value="/Users/praduman/PS/mini-project/codebase/miniproject/authenticationsystem/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-01-19"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="simpleRegistration" time="1.82"/>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="multipleRegistration" time="0.889"/>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidDoubleRegistrations" time="0.676"/>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="userNotInitiallyRegistered" time="0.169"/>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidEmptyPassword" time="0.16"/>
-  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidInvalidEMail" time="0.166"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="simpleRegistration" time="0.7"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="multipleRegistration" time="1.103"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidDoubleRegistrations" time="0.89"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="userNotInitiallyRegistered" time="0.22"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidEmptyPassword" time="0.259"/>
+  <testcase classname="com.miniproject.authentication.registrationtest.RegistrationUnitTest" name="avoidInvalidEMail" time="0.23"/>
 </testsuite>

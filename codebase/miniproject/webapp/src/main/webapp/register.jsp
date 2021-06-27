@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<%@ include file="./header.jsp"%>
+	<%-- <%@ include file="./header.jsp"%> --%>
 	<div class="container">
 		<br>
 
@@ -95,7 +95,7 @@
 					</div>
 					<!-- form-group// -->
 					<p class="text-center">
-						Have an account? <a href="">Log In</a>
+						Have an account? <a href="login.jsp">Log In</a>
 					</p>
 				</form>
 			</article>

@@ -64,7 +64,7 @@ public class RegistrationController extends HttpServlet {
 		// login if successful else error message
 		// redirect to respective page
 		if (registered) {
-			session.setAttribute("name", user.getName());
+			session.setAttribute("userName", user.getName());
 			log.info(">>>>>>> Registration successful. Logging in...");
 			
 			

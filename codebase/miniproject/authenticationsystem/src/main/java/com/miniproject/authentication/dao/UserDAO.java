@@ -46,7 +46,23 @@ public class UserDAO implements IUserDAO {
 	@Override
 	public User getUser(int userId) {
 		// TODO Auto-generated method stub
-		return null;
+		User user = null;
+		try {
+			CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+			CriteriaQuery<User> criteria = builder.createQuery(User.class);
+			criteria.select(criteria.from(User.class)); 
+			criteria.where(builder.equal(criteria.from(User.class).get("userId"), userId));
+			
+			user = entityManager.createQuery(criteria).getSingleResult();
+		} catch (NoResultException e) {
+			log.info("User does not exist for user-id: " + userId);
+		} catch (IllegalStateException e) {
+			log.error("Entity manager is closed!");
+		} catch (IllegalArgumentException e) {
+			log.error("Tried executing an invalid query!");
+		}
+		user.setPassword(null);
+		return user;
 	}
 
 	@Override
