@@ -8,6 +8,7 @@
 		<groupId>com.sapient</groupId>
 		<artifactId>miniproject</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.miniproject</groupId>
 	<artifactId>webapp</artifactId>
@@ -16,15 +17,27 @@
 	<name>webapp Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+
+	<!-- Local dependencies -->
+		<dependency>
+			<groupId>com.miniproject</groupId>
+			<artifactId>authenticationsystem</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.miniproject</groupId>
+			<artifactId>core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+	<!-- Remote dependencies -->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- <dependency> <groupId>com.miniproject</groupId> <artifactId>authenticationsystem</artifactId> 
-			<version>0.0.1-SNAPSHOT</version> </dependency> <dependency> <groupId>com.miniproject</groupId> 
-			<artifactId>core</artifactId> <version>0.0.1-SNAPSHOT</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
@@ -84,9 +97,6 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.10.2</version>
 		</dependency>
-		
+
 	</dependencies>
-	<build>
-		<finalName>webapp</finalName>
-	</build>
 </project>

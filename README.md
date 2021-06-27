@@ -27,3 +27,6 @@
 - [ ] Dockerfile
 - [ ] Jenkins integration
 - [ ] Live Testing
+
+## Setup:
+

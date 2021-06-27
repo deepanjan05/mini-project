@@ -1,0 +1,96 @@
+pipeline {
+    agent any
+
+    tools {
+        maven "maven"
+    }
+
+    parameters {
+        //string(name: "CredentialsID", defaultValue: '', description: "Bitbucket credential ID set up in Jenkins")
+        booleanParam(name: 'TEST', defaultValue: false, description: 'Tests to be done or not')
+        choice(name: 'ENTRY', choices: ['Maven package', 'Docker Image', 'Deploy only'], description: 'Select the start phase of deployment')
+        booleanParam(name: 'DATABASE_SETUP', defaultValue: false, description: 'True if daabase needs to be setup')
+    }
+
+    environment { 
+        //BitBucketUser = credentials("${CredentialsID}")  
+        path_ = "codebase/miniproject"
+    }
+
+    stages {
+
+        stage('Setup') {
+            when { expression { return params.DATABASE_SETUP }
+            steps {
+                echo "------------- Setup database -------------"
+                sh "docker pull postgres"
+                sh "docker run --name postgres-team-2 -p 5432:5432 -v ${env.WORKSPACE}\\postgres-team-2-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -d postgres"
+                sh "docker exec -it postgres-team-2 psql -U postgres"
+                echo ">>>>>> Postgres running..."
+                sh "docker pull mongo"
+                sh "docker run --name mongo-team-2 -p 27017:27017 -d mongo"
+                sh "docker exec -it mongo-team-2 mongo" 
+                echo ">>>>>> Mongo running..."
+            }
+        }
+
+        stage('Install') {
+            when { expression { return params.ENTRY == "Maven package" }
+            steps {
+                echo "------------- Starting Database -------------"
+                sh "docker exec -t postgres-team-2 psql -U postgres"
+                sh "docker exec -t mongo-team-2 mongo" 
+                echo ">>>>>> Mongo running..."
+                echo "------------- Install maven dependencies and create package -------------"
+                 
+                script {
+                    if (!fileExists("pom.xml")) {
+                        sh "git clone https://github.com/deepanjan05/mini-project.git"
+                    } else {
+                        echo "Local git repo already present..."
+                    }
+                }
+                dir("${path_}") {
+                    sh "git pull origin main"
+                    script {
+                        if (params.TEST) {
+                            sh "mvn clean package"
+                        } else {
+                            sh "mvn clean package -PnoTest"
+                        }
+                }
+            }
+        }
+
+        stage('Build') {
+            when { expression { return params.ENTRY != "Deploy only" }
+            steps {
+                echo "------------- Build Docker image -------------"
+                dir("${path_}") {
+                    // Build Maven docker image and container.
+                    sh "docker pull tomcat:9.0"
+                    sh "docker create --name miniproject-team-2 -p 8081:8080 -d tomcat:9.0"
+                    sh "docker cp webapp/target/webapp-0.0.1-SNAPSHOT.war miniproject-team-2:/usr/local/tomcat/webapps/"
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "------------- Run Docker container -------------"
+                dir("${path_}") {
+                    // Run maven docker container
+                    sh "docker run -it -p 8081:8080 miniproject-team-2"
+                }
+            }
+
+        }
+    }
+
+    post {
+        failure {
+		    echo "Application failed *****" 
+        }
+    }    
+
+}
