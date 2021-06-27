@@ -1,38 +1,28 @@
 package com.miniproject.core;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.miniproject.core.dao.QuestionDAO;
+import com.miniproject.core.entity.Question;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+public class AppTest {
+	QuestionDAO dao;
+	Question q;
+	
+	@Before
+	public void setUp() {
+		 dao = new QuestionDAO();
+		 q = new Question(101, "What is a jUnit test?", "Explain in more detail about java tests.", null, null);
+	}
+	
+    @Test
+    public void postQuestion() {
+    	assertTrue(dao.insertOne(q));	
     }
 }
