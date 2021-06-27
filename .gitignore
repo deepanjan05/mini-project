@@ -1,1 +1,7 @@
 html/
+**/target/
+**/.classpath
+**/.project
+**/.settings
+**/slf4j-demo.log
+**/.settings/
