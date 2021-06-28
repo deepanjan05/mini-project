@@ -60,7 +60,11 @@ public class ListAllQuestionsController extends HttpServlet {
 //		list.forEach((item) -> log.info(item));
 		
 		dao.findAll().forEach((q) -> log.info(q.toString()));
-		dao.findAll().forEach((q) -> list.add(q.toString()));
+		dao.findAll().forEach((q) -> list.add((q) -> {
+			if (q.getQTitle() != null) {
+				list.add(q.toString());
+			}
+		}));
 		list.forEach((item) -> log.info(item));
 		
 		req.setAttribute("myQuestions", list);

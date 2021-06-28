@@ -1,6 +1,5 @@
 package com.miniproject.webapp.controllers;
 
-
 import java.io.IOException;
 import java.util.*;
 
@@ -23,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @WebServlet("/profile")
-public class ProfileController extends HttpServlet{
+public class ProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -34,32 +33,36 @@ public class ProfileController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		log.info("---------------- Profile page request -----------------");
-		
-		if(AuthenticationService.isLoggedIn(req)) {
+
+		if (AuthenticationService.isLoggedIn(req)) {
 			HttpSession session = req.getSession();
 			Integer userId = Integer.parseInt((String) session.getAttribute("userId"));
-			
-			
+
 			User user = UserService.getUser(userId);
 			req.setAttribute("userName", user.getName());
 			req.setAttribute("email", user.getEmail());
 			req.setAttribute("gender", user.getGender());
-			
+
 			List<String> list = new ArrayList<>();
-			
+			List<String> dup = new ArrayList<>();
+
 			QuestionDAO dao = new QuestionDAO();
 			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
-			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
+			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> {
+				if (q.getQTitle() != null) {
+					list.add(q.toString());
+				}
+			});
 			list.forEach((item) -> log.info(item));
-			
+
 			req.setAttribute("myQuestions", list);
-			
+
 			String URI = "WEB-INF/view/profile.jsp";
 			req.getRequestDispatcher(URI).forward(req, resp);
 		}
-		
+
 		String URI = "login.jsp";
 		req.getRequestDispatcher(URI).forward(req, resp);
-		
+
 	}
 }

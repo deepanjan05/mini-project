@@ -105,7 +105,6 @@ if (!AuthenticationService.isLoggedIn(request)) {
 												<div class="card">
 													<div class="card-title">${current}</div>
 												</div>
-												<h>${current}</h1>
 											</sap:forEach>
 											<!-- <p class="text-dark">Question 1 explaination</p>
 											<hr class="short br-lighter">

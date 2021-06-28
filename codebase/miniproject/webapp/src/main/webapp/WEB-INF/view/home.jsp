@@ -32,7 +32,6 @@
        <div class="card">
        <div class="card-title"> ${current}</div>
        </div>
-       <h>${current}</h1>
 	</c:forEach>  
 	
 	</div>
