@@ -63,7 +63,7 @@ public class ListAllQuestionsController extends HttpServlet {
 		dao.findAll().forEach((q) -> list.add(q.toString()));
 		list.forEach((item) -> log.info(item));
 		
-		session.setAttribute("myQuestions", list);
+		req.setAttribute("myQuestions", list);
 		
 		req.getRequestDispatcher("WEB-INF/view/home.jsp").forward(req, resp);
 		

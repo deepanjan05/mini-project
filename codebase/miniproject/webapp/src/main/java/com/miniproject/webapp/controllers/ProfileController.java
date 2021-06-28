@@ -2,13 +2,16 @@ package com.miniproject.webapp.controllers;
 
 
 import java.io.IOException;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import static com.mongodb.client.model.Filters.eq;
 
 import com.miniproject.authentication.entity.User;
 import com.miniproject.authentication.service.UserService;
+import com.miniproject.core.dao.QuestionDAO;
 import com.miniproject.webapp.services.AuthenticationService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -41,6 +44,15 @@ public class ProfileController extends HttpServlet{
 			req.setAttribute("userName", user.getName());
 			req.setAttribute("email", user.getEmail());
 			req.setAttribute("gender", user.getGender());
+			
+			List<String> list = new ArrayList<>();
+			
+			QuestionDAO dao = new QuestionDAO();
+			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
+			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
+			list.forEach((item) -> log.info(item));
+			
+			req.setAttribute("myQuestions", list);
 			
 			String URI = "WEB-INF/view/profile.jsp";
 			req.getRequestDispatcher(URI).forward(req, resp);

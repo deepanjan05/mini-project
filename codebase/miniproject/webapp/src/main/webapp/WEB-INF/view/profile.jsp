@@ -19,12 +19,13 @@
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
-<% if(!AuthenticationService.isLoggedIn(request)) {
+<%
+if (!AuthenticationService.isLoggedIn(request)) {
 	request.getRequestDispatcher("../../login.jsp").forward(request, response);
 }
 %>
 <body>
-	<%@ include file="./header.jsp"%> 
+	<%@ include file="./header.jsp"%>
 	<div class="container mt-3">
 		<div class="main-body">
 			<div class="row">
@@ -33,12 +34,12 @@
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
 								<sap:if test="${requestScope.gender=='male'}">
-								<img src="https://www.w3schools.com/howto/img_avatar.png"
-									alt="Profile" class="rounded-circle" width="150">
+									<img src="https://www.w3schools.com/howto/img_avatar.png"
+										alt="Profile" class="rounded-circle" width="150">
 								</sap:if>
 								<sap:if test="${requestScope.gender!='male'}">
-								<img src="https://www.w3schools.com/howto/img_avatar2.png"
-									alt="Profile" class="rounded-circle" width="150">
+									<img src="https://www.w3schools.com/howto/img_avatar2.png"
+										alt="Profile" class="rounded-circle" width="150">
 								</sap:if>
 								<div class="mt-3">
 									<h4>${requestScope.userName}</h4>
@@ -99,8 +100,14 @@
 									<div class="card mt-2">
 										<div class="card-body">
 
-											<h5>Question 1</h5>
-											<p class="text-dark">Question 1 explaination</p>
+											<!-- <h5>Question 1</h5> -->
+											<sap:forEach items="${requestScope.myQuestions}" var="current">
+												<div class="card">
+													<div class="card-title">${current}</div>
+												</div>
+												<h>${current}</h1>
+											</sap:forEach>
+											<!-- <p class="text-dark">Question 1 explaination</p>
 											<hr class="short br-lighter">
 
 											<h5>Question 2</h5>
@@ -113,7 +120,7 @@
 
 											<h5>Question 4</h5>
 											<p class="text-dark">Question 4 explaination</p>
-											<hr class="short br-lighter">
+											<hr class="short br-lighter"> -->
 
 										</div>
 									</div>

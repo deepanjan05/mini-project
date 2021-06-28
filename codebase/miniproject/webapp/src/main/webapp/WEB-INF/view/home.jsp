@@ -28,7 +28,7 @@
 	<%@ include file="./header.jsp"%> 
 	<div id="displayQuestion">
 	
-	<c:forEach items="${sessionScope.myQuestions}" var="current">
+	<c:forEach items="${requestScope.myQuestions}" var="current">
        <div class="card">
        <div class="card-title"> ${current}</div>
        </div>
