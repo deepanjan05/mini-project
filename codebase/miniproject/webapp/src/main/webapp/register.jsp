@@ -1,3 +1,4 @@
+<%@page import="com.miniproject.webapp.services.AuthenticationService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
@@ -17,10 +18,14 @@
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
-
+<%
+if (AuthenticationService.isLoggedIn(request)) {
+	request.getRequestDispatcher("home").forward(request, response);
+}
+%>
 <body>
 
-<%-- 	<%@ include file="./WEB-INF/view/header.jsp"%> --%>
+	<%@ include file="./WEB-INF/view/header.jsp"%>
 
 	<div class="container">
 		<br>

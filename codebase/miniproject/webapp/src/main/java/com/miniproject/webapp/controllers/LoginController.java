@@ -56,24 +56,23 @@ public class LoginController extends HttpServlet{
 		// validate credentials
 		log.info(">>>>>>> Validating credentials");
 		try {
-			Integer userId = UserService.loginUser(email.toString(), password); 
+			Integer userId = UserService.loginUser(email, password); 
 			if (userId != -1) {
 				log.info("Login Success!");
 				User user = UserService.getUser(userId); 
 				
 				// set session attributes
-				session.setAttribute("userId", user.getUserId());
+				session.setAttribute("userId", String.valueOf(user.getUserId()));
 				session.setAttribute("userName", user.getName());
 				
+				log.info(String.valueOf(user.getUserId()));
+				
 				// set session attributes
-				Cookie userNameCookie = new Cookie("userName", (String) session.getAttribute("userName"));
-				Cookie userIDCookie = new Cookie("userId", user.getName());
+				Cookie userIDCookie = new Cookie("userId", String.valueOf(user.getUserId()));
 				
-				resp.addCookie(userNameCookie);
 				resp.addCookie(userIDCookie);
-				
-				String URI = "login";
-				URI = "WEB-INF/view/home.jsp";
+
+				String URI = "WEB-INF/view/home.jsp";
 				req.getRequestDispatcher(URI).forward(req, resp);
 			} else {
 				err = "Wrong credentials!";

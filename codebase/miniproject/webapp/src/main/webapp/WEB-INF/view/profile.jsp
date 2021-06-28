@@ -1,3 +1,4 @@
+<%@page import="com.miniproject.webapp.services.AuthenticationService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
@@ -18,22 +19,30 @@
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
-
+<% if(!AuthenticationService.isLoggedIn(request)) {
+	request.getRequestDispatcher("../../login.jsp").forward(request, response);
+}
+%>
 <body>
-	<%@ include file="./header.jsp"%>
+	<%@ include file="./header.jsp"%> 
 	<div class="container mt-3">
 		<div class="main-body">
-
 			<div class="row">
 				<div class="col-md-4 mb-3">
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
+								<sap:if test="${requestScope.gender=='male'}">
 								<img src="https://www.w3schools.com/howto/img_avatar.png"
 									alt="Profile" class="rounded-circle" width="150">
+								</sap:if>
+								<sap:if test="${requestScope.gender!='male'}">
+								<img src="https://www.w3schools.com/howto/img_avatar2.png"
+									alt="Profile" class="rounded-circle" width="150">
+								</sap:if>
 								<div class="mt-3">
-									<h4>Deepanjan Datta</h4>
-									<p class="text-muted font-size-sm">deepanjan052000@gmail.com</p>
+									<h4>${requestScope.userName}</h4>
+									<p class="text-muted font-size-sm">${requestScope.email}</p>
 								</div>
 							</div>
 						</div>
@@ -47,7 +56,7 @@
 								<div class="col-sm-3">
 									<h6 class="mb-0">Full Name</h6>
 								</div>
-								<div class="col-sm-9 text-secondary">Deepanjan Datta</div>
+								<div class="col-sm-9 text-secondary">${requestScope.userName}</div>
 							</div>
 							<hr>
 							<div class="row">
@@ -55,18 +64,18 @@
 									<h6 class="mb-0">Email</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									deepanjan052000@gmail.com</div>
+									${requestScope.email}</div>
 							</div>
 							<hr>
 							<div class="row">
 								<div class="col-sm-3">
 									<h6 class="mb-0">Gender</h6>
 								</div>
-								<div class="col-sm-9 text-secondary">Male</div>
+								<div class="col-sm-9 text-secondary">${requestScope.gender}</div>
 							</div>
 							<hr>
 							<div class="row">
-								<div class="col text-secondary">Member since 6 months</div>
+								<div class="col text-secondary">Member since 1 Day</div>
 							</div>
 						</div>
 					</div>

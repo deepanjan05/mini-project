@@ -14,11 +14,12 @@ import javax.servlet.http.HttpSession;
 import static com.mongodb.client.model.Filters.eq;
 import com.miniproject.core.dao.QuestionDAO;
 import com.miniproject.core.entity.Question;
+import com.miniproject.webapp.services.AuthenticationService;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@WebServlet("/all-questions")
+@WebServlet("/home")
 public class ListAllQuestionsController extends HttpServlet {
 
 	/**
@@ -35,11 +36,9 @@ public class ListAllQuestionsController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		
-		String URI = "login";
-		URI = "WEB-INF/view/home.jsp";
-		
+		String URI = "login.jsp";		
 		//Check login
-		if(session.getAttribute("userId") == null) {
+		if(!AuthenticationService.isLoggedIn(req)) {
 			log.info("you are NOT logged in");
 			req.getRequestDispatcher(URI).forward(req, resp);
 		}
@@ -55,14 +54,18 @@ public class ListAllQuestionsController extends HttpServlet {
 		 * (Integer)3)log.info("both are integers"); else
 		 * log.info("incompatible types!!!!!!!!!");
 		 */
-		Integer userId = Integer.valueOf(session.getAttribute("userId").toString());
-		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
-		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
+//		Integer userId = Integer.valueOf(session.getAttribute("userId").toString());
+//		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
+//		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
+//		list.forEach((item) -> log.info(item));
+		
+		dao.findAll().forEach((q) -> log.info(q.toString()));
+		dao.findAll().forEach((q) -> list.add(q.toString()));
 		list.forEach((item) -> log.info(item));
 		
 		session.setAttribute("myQuestions", list);
 		
-		req.getRequestDispatcher("myQuestions.jsp").forward(req, resp);
+		req.getRequestDispatcher("WEB-INF/view/home.jsp").forward(req, resp);
 		
 		
 	}

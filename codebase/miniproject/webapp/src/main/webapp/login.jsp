@@ -1,3 +1,4 @@
+<%@page import="com.miniproject.webapp.services.AuthenticationService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
@@ -19,7 +20,11 @@
 </head>
 
 <body>
-	<%-- <%@ include file="./header.jsp"%> --%>
+<% if(AuthenticationService.isLoggedIn(request)) {
+	request.getRequestDispatcher("home").forward(request, response);
+}
+%>
+	<%@ include file="WEB-INF/view/header.jsp"%> 
 	<div class="container">
 		<br>
 
@@ -47,13 +52,15 @@
 						</div>
 						<input class="form-control" id="password"
 							placeholder="Your password" type="password" name="password"
-							onchange='check();' required>
+							required>
 					</div>
-					
+					<sap:if test="${requestScope.errorMsg!=null}">
+						<div class="alert alert-danger" role="alert">
+							${requestScope.errorMsg}</div>
+					</sap:if>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-block">
-							Login
-						</button>
+							Login</button>
 					</div>
 					<!-- form-group// -->
 					<p class="text-center">

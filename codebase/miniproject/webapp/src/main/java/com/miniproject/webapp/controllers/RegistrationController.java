@@ -64,13 +64,19 @@ public class RegistrationController extends HttpServlet {
 		// login if successful else error message
 		// redirect to respective page
 		if (registered) {
-			session.setAttribute("userName", user.getName());
-      session.setAttribute("userId", Integer.toString(user.getUserId()));
 			log.info(">>>>>>> Registration successful. Logging in...");
+			// set session attributes
+			session.setAttribute("userId", String.valueOf(user.getUserId()));
+			session.setAttribute("userName", user.getName());
 			
+			log.info(String.valueOf(user.getUserId()));
 			
-			String URI = "login";
-			URI = "WEB-INF/view/home.jsp";
+			// set session attributes
+			Cookie userIDCookie = new Cookie("userId", String.valueOf(user.getUserId()));
+
+			resp.addCookie(userIDCookie);
+						
+			String URI = "home";
 			req.getRequestDispatcher(URI).forward(req, resp);
 		} else {
 			req.setAttribute("errorMsg", err);

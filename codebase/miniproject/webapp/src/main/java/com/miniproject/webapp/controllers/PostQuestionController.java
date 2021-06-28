@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import com.miniproject.core.entity.Question;
 import com.miniproject.core.service.QuestionService;
+import com.miniproject.webapp.services.AuthenticationService;
 
-import jdk.internal.org.jline.utils.Log;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -33,11 +33,10 @@ public class PostQuestionController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		
-		String URI = "login";
-		URI = "register.jsp";
-		
+		String URI = "login.jsp";
+
 		//Check login
-		if(session.getAttribute("userId") == null) {
+		if(!AuthenticationService.isLoggedIn(req)) {
 			log.info("you are NOT logged in!");
 			req.getRequestDispatcher(URI).forward(req, resp);
 			
@@ -52,7 +51,7 @@ public class PostQuestionController extends HttpServlet {
 		QuestionService questionService = new QuestionService();
 		if(questionService.postQuestion(question)) {
 			log.info("{}",question.toString());
-			req.getRequestDispatcher("all-questions").forward(req, resp);
+			req.getRequestDispatcher("home").forward(req, resp);
 		}
 		else {
 			log.info("error: unsuccessful");
