@@ -11492,3 +11492,315 @@ java.lang.NoSuchMethodException: com.miniproject.registration.entity.User$Hibern
 [Mon Jun 28, 2021 08:09:03,922 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
 [Mon Jun 28, 2021 08:09:04,046 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 [Mon Jun 28, 2021 08:09:04,052 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: deepanjangmail.com
+[Tue Jun 29, 2021 09:27:24,136 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:24,228 am] [main           ] org.hibernate.Version HHH000412: Hibernate Core {5.4.4.Final}
+[Tue Jun 29, 2021 09:27:24,408 am] [main           ] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[Tue Jun 29, 2021 09:27:24,659 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:24,664 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:24,665 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:24,665 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:24,667 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:24,757 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:25,456 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:25,519 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:25,525 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:25,526 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:25,526 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:25,526 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:25,526 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:25,536 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:25,731 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:25,773 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: praduman.pannu@publicissapient.com
+[Tue Jun 29, 2021 09:27:25,888 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:25,895 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:25,895 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:25,895 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:25,895 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:25,896 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:25,908 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,054 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,060 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: prp@gmail.com
+[Tue Jun 29, 2021 09:27:26,060 am] [main           ] com.miniproject.authentication.service.UserService User doesn't exist!
+[Tue Jun 29, 2021 09:27:26,067 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,072 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,073 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,073 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,073 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,074 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,082 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,237 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,256 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 19
+[Tue Jun 29, 2021 09:27:26,260 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,265 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,266 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,266 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,266 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,266 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,275 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,417 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,420 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,426 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,426 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,427 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,427 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,427 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,437 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,572 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,588 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: praduman.pannu@publicissapient.com
+[Tue Jun 29, 2021 09:27:26,596 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,602 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,603 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,603 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,603 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,604 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,613 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,743 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,748 am] [main           ] com.miniproject.authentication.service.UserService Wrong password!
+[Tue Jun 29, 2021 09:27:26,754 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,759 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,759 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,759 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,760 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,760 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,768 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:26,904 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:26,914 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 20
+[Tue Jun 29, 2021 09:27:26,917 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:26,922 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:26,922 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:26,923 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:26,923 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:26,923 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:26,932 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,065 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,068 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,073 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,073 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,074 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,074 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,074 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,084 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,212 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,228 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: praduman.pannu@publicissapient.com
+[Tue Jun 29, 2021 09:27:27,236 am] [main           ] com.miniproject.authentication.service.UserService Invalid email!
+[Tue Jun 29, 2021 09:27:27,245 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,254 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,254 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,255 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,255 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,255 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,270 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,399 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,409 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 21
+[Tue Jun 29, 2021 09:27:27,412 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,417 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,418 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,419 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,419 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,419 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,429 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,563 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,565 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,570 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,570 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,570 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,570 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,570 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,580 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,717 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,733 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: praduman.pannu@publicissapient.com
+[Tue Jun 29, 2021 09:27:27,741 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,746 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,746 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,746 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,746 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,747 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,757 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:27,888 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:27,893 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: prp@gmail.com
+[Tue Jun 29, 2021 09:27:27,893 am] [main           ] com.miniproject.authentication.service.UserService User doesn't exist!
+[Tue Jun 29, 2021 09:27:27,899 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:27,903 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:27,903 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:27,904 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:27,904 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:27,904 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:27,912 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,035 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,056 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 22
+[Tue Jun 29, 2021 09:27:28,059 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,065 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,065 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,065 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,065 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,065 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,076 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,215 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,219 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,225 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,225 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,226 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,226 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,226 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,237 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,374 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,391 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: praduman.pannu@publicissapient.com
+[Tue Jun 29, 2021 09:27:28,399 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,405 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,405 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,405 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,406 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,406 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,414 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,553 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,558 am] [main           ] com.miniproject.authentication.service.UserService Login successfull!
+[Tue Jun 29, 2021 09:27:28,560 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,565 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,566 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,566 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,566 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,567 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,577 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,722 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,742 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,746 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,747 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,747 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,747 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,747 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,757 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:28,884 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:28,893 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 23
+[Tue Jun 29, 2021 09:27:28,897 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:28,902 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:28,902 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:28,903 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:28,903 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:28,903 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:28,915 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,049 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,052 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,056 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,056 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,057 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,057 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,057 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,068 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,203 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,220 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:29,231 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,235 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,236 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,236 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,236 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,236 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,245 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,367 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,377 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 24
+[Tue Jun 29, 2021 09:27:29,380 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,385 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,386 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,386 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,386 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,386 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,397 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,523 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,526 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,530 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,531 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,531 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,531 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,531 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,541 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,690 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,696 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:29,702 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,707 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,707 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,707 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,707 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,707 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,718 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,838 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,849 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 25
+[Tue Jun 29, 2021 09:27:29,852 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:29,857 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:29,857 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:29,857 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:29,857 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:29,857 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:29,868 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:29,991 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:29,997 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: deepanjan052@gmail.com
+[Tue Jun 29, 2021 09:27:30,005 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,009 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,009 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,010 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,010 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,010 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,020 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,149 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,160 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 26
+[Tue Jun 29, 2021 09:27:30,163 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,168 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,168 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,168 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,168 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,168 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,179 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,311 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,313 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,318 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,319 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,319 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,319 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,319 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,330 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,467 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,488 am] [main           ] com.miniproject.authentication.dao.UserDAO New user registered! User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:30,490 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,495 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,495 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,495 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,495 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,495 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,506 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,651 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,651 am] [main           ] com.miniproject.authentication.dao.UserDAO Persistent user object! User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:30,658 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,663 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,663 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,663 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,663 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,664 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,674 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,817 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,837 am] [main           ] com.miniproject.authentication.dao.UserDAO User deleted from database! User ID : 27
+[Tue Jun 29, 2021 09:27:30,839 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:30,844 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:30,844 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:30,844 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:30,844 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:30,844 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:30,855 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:30,985 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:30,989 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: eberhard.wolff@gmail.com
+[Tue Jun 29, 2021 09:27:30,992 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:30,994 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:31,000 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:31,000 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:31,000 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:31,000 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:31,000 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:31,010 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:31,132 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:31,138 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: deepanjan052000@gmail.com
+[Tue Jun 29, 2021 09:27:31,141 am] [main           ] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: sap]
+[Tue Jun 29, 2021 09:27:31,146 am] [main           ] org.hibernate.orm.connections.pooling HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[Tue Jun 29, 2021 09:27:31,146 am] [main           ] org.hibernate.orm.connections.pooling HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/miniproject]
+[Tue Jun 29, 2021 09:27:31,146 am] [main           ] org.hibernate.orm.connections.pooling HHH10001001: Connection properties: {password=****, user=postgres}
+[Tue Jun 29, 2021 09:27:31,150 am] [main           ] org.hibernate.orm.connections.pooling HHH10001003: Autocommit mode: false
+[Tue Jun 29, 2021 09:27:31,150 am] [main           ] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl HHH000115: Hibernate connection pool size: 20 (min=1)
+[Tue Jun 29, 2021 09:27:31,162 am] [main           ] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[Tue Jun 29, 2021 09:27:31,296 am] [main           ] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[Tue Jun 29, 2021 09:27:31,302 am] [main           ] com.miniproject.authentication.dao.UserDAO User does not exist. User email: deepanjangmail.com
