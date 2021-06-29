@@ -25,7 +25,7 @@ public class MongoUtil {
 		return MongoClients.create(
 		        MongoClientSettings.builder()
 		                .applyToClusterSettings(builder ->
-		                        builder.hosts(Arrays.asList(new ServerAddress("localhost", 27017))))
+		                        builder.hosts(Arrays.asList(new ServerAddress("mongohost", 27017))))
 		                .build());
 	}
 
