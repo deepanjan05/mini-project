@@ -6,7 +6,7 @@ import com.miniproject.core.entity.Question;
 public class QuestionService {
 
 	public static boolean postQuestion(Question q) {
-		if (q == null || q.getQTitle()==null)
+		if (q == null || q.getTitle()==null)
 			return false;
 		QuestionDAO dao = new QuestionDAO();
 		

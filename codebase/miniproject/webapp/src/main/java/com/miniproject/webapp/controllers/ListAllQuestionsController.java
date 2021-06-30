@@ -47,7 +47,7 @@ public class ListAllQuestionsController extends HttpServlet {
 		
 		log.info(">>>>>>>>>>>getting your questions----- " + session.getAttribute("userId"));
 	
-		List<String> list = new ArrayList<>();
+		List<Question> list = new ArrayList<>();
 		
 		/*
 		 * if(Integer.valueOf(session.getAttribute("user-id").toString()) ==
@@ -59,13 +59,13 @@ public class ListAllQuestionsController extends HttpServlet {
 //		dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> list.add(q.toString()));
 //		list.forEach((item) -> log.info(item));
 		
-		dao.findAll().forEach((q) -> log.info(q.toString()));
+		dao.findAll().forEach((q) -> log.info("" + q.toString()));
 		dao.findAll().forEach((q) -> {
-			if (q.getQTitle() != null) {
-				list.add(q.toString());
+			if (q.getTitle() != null) {
+				list.add(q);
 			}
 		});
-		list.forEach((item) -> log.info(item));
+
 		
 		req.setAttribute("myQuestions", list);
 		

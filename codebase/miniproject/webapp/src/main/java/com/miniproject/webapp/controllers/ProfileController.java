@@ -49,7 +49,7 @@ public class ProfileController extends HttpServlet {
 			QuestionDAO dao = new QuestionDAO();
 			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> log.info(q.toString()));
 			dao.findWithCondition(eq("uid", userId), 20).forEachRemaining((q) -> {
-				if (q.getQTitle() != null) {
+				if (q.getTitle() != null) {
 					list.add(q.toString());
 				}
 			});

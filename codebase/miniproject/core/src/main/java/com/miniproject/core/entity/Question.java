@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Question {
 	private Integer uid;
-	private String qTitle;
-	private String qBody;
-	private ObjectId bestAnswerId;
+	private String title;
+	private String body;
+	private ObjectId bestanswerid;
 	private List<ObjectId> answers;
 	
 }
