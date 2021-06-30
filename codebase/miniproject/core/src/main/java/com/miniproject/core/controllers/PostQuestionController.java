@@ -31,9 +31,9 @@ public class PostQuestionController extends HttpServlet {
 		Question question = new Question();
 		
 		question.setUid(Integer.parseInt(req.getParameter("user-id")));
-		question.setQTitle(req.getParameter("question-title"));
-		question.setQBody(req.getParameter("question-body"));
-		question.setBestAnswerId(null);
+		question.setTitle(req.getParameter("question-title"));
+		question.setBody(req.getParameter("question-body"));
+		question.setBestanswerid(null);
 		question.setAnswers(null);
 	}
 }

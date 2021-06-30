@@ -45,8 +45,8 @@ public class PostQuestionController extends HttpServlet {
 		Question question = new Question();
 		
 		question.setUid(Integer.parseInt((String) session.getAttribute("userId")));
-		question.setQTitle(req.getParameter("question-title"));
-		question.setQBody(req.getParameter("question-body"));
+		question.setTitle(req.getParameter("question-title"));
+		question.setBody(req.getParameter("question-body"));
 		
 		QuestionService questionService = new QuestionService();
 		if(questionService.postQuestion(question)) {
